@@ -5,9 +5,9 @@ using namespace std;
 
 int main()
 {
+    int tamano = 0, larga = 0;
     char caracter;
-    int contador = 0, lineas = 0, letras = 0;
-    string palabra;
+    string palabra, lar;
     ifstream palabraLarga;
 
     palabraLarga.open("frasesDeBjarme.txt");
@@ -15,11 +15,13 @@ int main()
     if(palabraLarga.is_open())
     {
         while(!palabraLarga.eof()){
+            while(getline(palabraLarga, caracter)){
+                palabra.lenght() = tamano;
 
-            palabraLarga.getline(palabra);
-
-
-            cout << "La palabra mas larga tiene " << palabra.lenght() << " letras" << endl;
+                if(tamano > larga)
+                    palabra.lenght() = larga;
+            }
+            cout << "La palabra mas larga tiene " << tamano << " letras" << endl;
         }
         palabraLarga.close();
     }
@@ -29,4 +31,3 @@ int main()
 
     return 0;
 }
-

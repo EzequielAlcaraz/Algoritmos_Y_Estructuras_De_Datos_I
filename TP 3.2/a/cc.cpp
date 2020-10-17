@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    char caracter;
+    char caracter, espacio;
     int contador = 0, lineas = 0, palabra = 0;
     //string palabra;
     ifstream contarArchivo;
@@ -19,10 +19,10 @@ int main()
 
             contarArchivo.get(caracter);
 
-            if (caracter == isalpha || caracter == ' '){
+            if (caracter == isalpha || espacio == ' '){
                 while(caracter != ' '){
                         contador++;
-                    if (caracter == ' ')
+                    if (espacio == ' ')
                         palabra++;
                     if (caracter == '\n')
                         lineas++;

@@ -3,6 +3,8 @@
 
 using namespace std;
 
+        //while(getchar()!='\n')
+
 int main()
 {
     string frase;
@@ -25,4 +27,5 @@ int main()
 
     return 0;
 }
+
 
