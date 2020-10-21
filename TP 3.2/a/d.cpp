@@ -8,25 +8,20 @@ int main()
     char caracter;
     int contador = 0, lineas = 0, letras = 0;
     string palabra;
-    ifstream contarArchivo;
+    ifstream palabraLarga;
 
-    contarArchivo.open("frasesDeBjarme.txt");
+    palabraLarga.open("frasesDeBjarme.txt");
 
-    if (contarArchivo.is_open()){
+    if(palabraLarga.is_open())
+    {
+        while(!palabraLarga.eof()){
 
-        while (!contarArchivo.eof()){
-            contarArchivo.get(caracter);
+            palabraLarga.getline(palabra);
 
-            if(caracter == ' '){
-                contador++;
-            }
-            if(caracter == '\n'){
-                lineas++;
-            }
-            letras++;
+
+            cout << "La palabra mas larga tiene " << palabra.lenght() << " letras" << endl;
         }
-        cout << "La palabra mas larga en el archivo tiene: " << letras << " letras" << endl;
-        contarArchivo.close();
+        palabraLarga.close();
     }
     else{
         cout << "ERROR: No se ha encontrado el archivo" << endl;

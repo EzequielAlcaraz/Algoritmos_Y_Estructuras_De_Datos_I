@@ -6,7 +6,10 @@ using namespace std;
 int main()
 {
     int contLetra = 0;
-    char letra[200];
+    const int MAX = 200;
+    typedef char tLetra[MAX];
+    tLetra letra;
+    string texto;
     ifstream contarLetra;
 
     contarLetra.open("frasesDeBjarme.txt");
@@ -14,8 +17,14 @@ int main()
     if (contarLetra.is_open()){
         while (!contarLetra.eof()){
 
-            for(int i=0; i<200; i++)
+            while(contarLetra >> texto)
+                cout << texto << endl;
+
+            for(int i=0; i<MAX; i++)
                 contarLetra.get(letra[i]);
+                /*if(letra[i] == ' '){
+
+                }*/
                 contLetra++;
         }
         cout << "La cantidad de letras es: " << contLetra << endl;
