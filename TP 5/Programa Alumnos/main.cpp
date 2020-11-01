@@ -88,11 +88,7 @@ void cargarLista()
             cargarLis >> lista.alumno[lista.contador].nota;
 
             if((!lista.alumno[lista.contador].nombre.empty()) && (!lista.alumno[lista.contador].apellido.empty())){
-<<<<<<< HEAD
                 lista.contador++;
-=======
-                    lista.contador++;
->>>>>>> 2b5c499ce9320ee3ad4023cd272fca0f7f34decb
             }
         }
     }
