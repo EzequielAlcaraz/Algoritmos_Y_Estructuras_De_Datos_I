@@ -23,50 +23,30 @@ void Animal::getNombre(){
 void Animal::setCodigo(int c){
     codigo = c;                   //Probar codigo = c
     cout << "\nEl codigo del animal es: " << c << endl;
+    cout << "\n\n\n\nPresione cualquier tecla para volver al menu" << endl;
     getch();
 }
 
 void Animal::getType(){
-    switch(codigo)
-    {
-    case 1:
-        cout << "Tipo de animal: Cocodrilo" << endl;
-        break;
-    case 2:
-        cout << "Tipo de animal: Ganso" << endl;
-        break;
-    case 3:
-        cout << "Tipo de animal: Pelicano" << endl;
-        break;
-    case 4:
-        cout << "Tipo de animal: Murcielago" << endl;
-        break;
-    case 5:
-        cout << "Tipo de animal: Ballena" << endl;
-        break;
-    case 6:
-        cout << "Tipo de animal: Leon Marino" << endl;
-        break;
-    }
 
-    /*if(codigo == 1){
-		cout << "Tipo de animal: Cocodrilo" << endl;
+    if(codigo == 1){
+		cout << " - Tipo de animal: Cocodrilo" << endl;
 	}
 	else if(codigo == 2){
-        cout << "Tipo de animal: Ganso" << endl;
+        cout << " - Tipo de animal: Ganso" << endl;
     }
     else if(codigo == 3){
-        cout << "Tipo de animal: Pelicano" << endl;
+        cout << " - Tipo de animal: Pelicano" << endl;
     }
     else if(codigo == 4){
-        cout << "Tipo de animal: Murcielago" << endl;
+        cout << " - Tipo de animal: Murcielago" << endl;
     }
     else if(codigo == 5){
-        cout << "Tipo de animal: Ballena" << endl;
+        cout << " - Tipo de animal: Ballena" << endl;
     }
     else if(codigo == 6){
-        cout << "Tipo de animal: Leon Marino" << endl;
-    }*/
+        cout << " - Tipo de animal: Leon Marino" << endl;
+    }
 }
 
 void Animal::toBreed(){
@@ -81,9 +61,9 @@ void Animal::toBreed(){
 }
 
 void Oviparous::layEggs(){
-    cout << "El animal puso un huevo" << endl;
+    cout << " ---> El animal puso un huevo" << endl;
 }
 
 void Mammal::nurse(){
-    cout << "El animal tuvo una cria" << endl;
+    cout << " ---> El animal tuvo una cria" << endl;
 }
